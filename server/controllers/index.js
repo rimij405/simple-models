@@ -33,7 +33,10 @@ const hostIndex = (req, res) => {
   // actually calls index.jade. A second parameter of JSON can be passed
   // into the jade to be used as variables with #{varName}
   res.render('index', {
-    currentName: lastAdded.name,
+    currentName: {
+      Cat: lastAdded.name,
+      Dog: lastAddedDog.name,
+    },
     title: 'Home',
     pageName: 'Home Page',
   });
